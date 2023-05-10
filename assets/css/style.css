@@ -16,7 +16,7 @@ header {
     text-align: center;
 }
 
-.start-button {
+#start-button {
     color: #8ee4af;
     background: #05386B;
     cursor: pointer;
@@ -24,7 +24,7 @@ header {
     padding: 5px 10px;
 }
 
-.start-button:hover {
+#start-button:hover {
     background: #edf5e1;
     color: #379683;
 }

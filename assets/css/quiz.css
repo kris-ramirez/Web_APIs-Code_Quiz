@@ -1,3 +1,6 @@
+h1 {
+    color: black;
+}
 /*score*/
 #score {
     color: black;
@@ -6,22 +9,29 @@
 #timer {
     color: red;
     background-color: black;
+    padding: 10px;
 }
 #question {
     color: #05386B;
     text-align: center;
 }
-.answers {
-   margin: 0 30% 10px 30%;
-   padding: 5px;
+.answers{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.answertext {
+    width: 250px;
    background: #edf5e1;
    color: #379683;
    font-size: 15px;
    text-align: center;
+   padding: 20px 5px;
 }
-.answers:hover {
+.answertext:hover {
     background: #05386B;
     color:#edf5e1;
+    cursor: pointer;
 }
 
 .correct {
@@ -29,4 +39,8 @@
 }
 .incorrect {
     background: red;
+}
+
+#dry {
+    display: none;
 }
