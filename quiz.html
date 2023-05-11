@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/quiz.css" />
 </head>
-
+<!--Quiz page-->
 <body>
+    <!--Score and Timer at the top of the page-->
     <header>
-        <div>
+        <div id="scoreContainer">
             <p> Score: <span id="score">0</span></p>
         </div>
-        <div>
+        <div id="timerContainer">
             <p> Time Left: <span id="timer">0</span></p>
         </div>
     </header>
+    <!--Question and answer choices-->
+    <!--This main will disappear after the last question-->
     <main id="flood">
         <h1 id="question">Answer the question below: </h1>
         <div class="answers">
@@ -33,18 +36,18 @@
             <p class="answertext" data-letter="D">Answer D</p>
         </div>
     </main>
+    <!--Results page will appear after last question-->
     <main id="dry">
         <h1>Results</h1>
         <h2 id="enterName">Enter your name to save your quiz score!</h2>
         <div id="user-info">
             <input id="userName" placeholder="Type name here">
             <br>
-            <button id="saveBtn" type="submit">Save</button>
-            <p id="nameScore"></p>
+            <button id="saveBtn" type="submit">Save</button> 
+            <button id="startAgain">Try Again</button>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="assets/js/quiz.js"></script>
 </body>
-
 </html>

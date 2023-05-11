@@ -1,24 +1,40 @@
 /*score*/
+#scoreContainer {
+    width: 30%;
+    color: #379683;
+    background-color: #edf5e1;
+    padding: 3px 2px;
+    margin: 20px 0 5px 20px;
+    border-radius: 10%;
+}
 #score {
-    color: black;
+    color: #05386B;
 }
 /*timer*/
-#timer {
-    color: red;
-    background-color: black;
-    padding: 10px;
+#timerContainer {
+    width: 30%;
+    color: #379683;
+    background-color: #edf5e1;
+    padding: 4px 4px;
+    margin: 20px 0 5px 20px;
+    border-radius: 10%;
 }
+#timer {
+    color: #05386B;
+}
+/*questions*/
 #question {
     color: #05386B;
     text-align: center;
 }
+/*answer choices*/
 .answers{
     display: flex;
     width: 100%;
     justify-content: center;
 }
 .answertext {
-    width: 250px;
+    width: 150px;
    background: #edf5e1;
    color: #379683;
    font-size: 15px;
@@ -30,19 +46,22 @@
     color:#edf5e1;
     cursor: pointer;
 }
-
+/*what happens when user clicks a correct or incorrect choice*/
 .correct {
-    background: #05386B;
+    background: greenyellow;
+    color: #05386B;
 }
 .incorrect {
     background: red;
+    color:#edf5e1;
 }
-/* end results page*/
+
 /* unhides results page */
 #dry {
     display: none;
     text-align: center;
 }
+/* end results page*/
 h1 {
     color: #05386B;
     text-align: center;
@@ -53,7 +72,8 @@ h2 {
 }
 input {
     text-align: center;
-    display: flex;
+    margin-bottom: 5px;
+    font-size: large;
 }
 input [type=text] {
     background-color: #edf5e1;
@@ -64,14 +84,25 @@ input [type=text] {
     color: #05386B;
     text-align: center;
 }
-p {
-    text-align: center;
-}
+/*buttons on results page*/
 #saveBtn {
     text-align: center;
+    background-color: #05386B;
+    color:#edf5e1;
+    font-size: medium;
+    padding: 3px;
 }
-/*not working*/
+#startAgain {
+    text-align: center;
+    background-color: #05386B;
+    color:#edf5e1;
+    font-size: medium;
+    padding: 3px;
+}
+/*shows up after user clicks save & shows name and score*/
 #userInfo {
-    color:#05386B;
-    text-decoration: wavy;
+    color: #edf5e1;
+    background: #379683 ;
+    margin: 30px 200px;
+    font-size: large;
 }

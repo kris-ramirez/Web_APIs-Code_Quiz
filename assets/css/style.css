@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-
+/*elements*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -12,16 +12,18 @@ body {
 }
 /*quiz start page*/
 header {
-    color: #edf5e1;
+    color: #05386B;
     text-align: center;
+    margin-top: 50px;
 }
 
 #start-button {
-    color: #8ee4af;
+    color: #edf5e1;
     background: #05386B;
     cursor: pointer;
     font-size: medium;
     padding: 5px 10px;
+    text-decoration: none;
 }
 
 #start-button:hover {
