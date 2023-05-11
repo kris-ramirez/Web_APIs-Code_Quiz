@@ -2,6 +2,7 @@ var question = document.querySelector('#question');
 var choices = document.querySelectorAll('.answertext');
 var scoreText = document.querySelector('#score');
 var timer1 = document.querySelector('#timer');
+var saveButton = document.querySelector('#saveBtn');
 
 var currentQuestion = {};
 var score = 0;
@@ -52,9 +53,9 @@ var questions = [
         choiceC: 'console.log',
         choiceD: 'for loops',
         answer: 'C',
-    }, ]
+    },]
 
-var startPoints = 100; 
+var startPoints = 100;
 //when 'start' button clicked run this function
 startQuiz = () => {
     questioncounter = 0;
@@ -63,19 +64,20 @@ startQuiz = () => {
     getNextQuestion();
 }
 
-function getNextQuestion () {
+
+function getNextQuestion() {
     if (allquestions.length === 0 || questioncounter > maxquestions) {
-        localStorage.setItem('mostrecentscore', points)
-        document.getElementById('flood').style.display="none";
-        document.getElementById('dry').style.display='block';
+        localStorage.setItem('highscore', points)
+        document.getElementById('flood').style.display = "none";
+        document.getElementById('dry').style.display = 'block';
         clearInterval(timerInterval);
-        //return window.location.assign("end.html")
+
     }
     questioncounter++;
     //grabs a random question from array
     var qindex = Math.floor(Math.random() * allquestions.length);
     currentQuestion = allquestions[qindex];
-    //shows question in html inner is better than textContent 
+    //shows question 
     question.innerText = currentQuestion.question;
 
     //shows answer choices
@@ -92,7 +94,7 @@ function getNextQuestion () {
 }
 
 //what happens when answers are clicked on
-function answerSelected (e) {
+function answerSelected(e) {
     if (!correctanswers) {
         return;
     }
@@ -113,10 +115,7 @@ function answerSelected (e) {
     choices.forEach(choice => {
         if (choice.dataset['letter'] == currentQuestion.answer) {
             choice.classList.add('correct');
-        setTimeout(() => {
-        },3000)
         }
-
     });
 
     setTimeout(getNextQuestion, 1000);
@@ -124,22 +123,34 @@ function answerSelected (e) {
 }
 
 
-function incrementPoints (num) {
+function incrementPoints(num) {
     points += num;
     scoreText.innerText = points;
+
 }
 
 function setTime() {
-    timerInterval = setInterval(function() {
+    timerInterval = setInterval(function () {
         timeLeft--;
         timer1.textContent = timeLeft + ' seconds left';
 
-        if(timeLeft === 0) {
+        if (timeLeft === 0) {
             clearInterval(timerInterval);
         }
     }, 1000);
 }
 setTime();
+
+saveButton.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    var userName = document.querySelector("#userName").value;
+    var highScore = scoreText.textContent;
+    var userInfo = document.querySelector("#user-info");
+    
+    userInfo.innerHTML = "Name: " + userName + " - " + highScore;
+});
+
 startQuiz();
 
-//Take user to high scores page
+

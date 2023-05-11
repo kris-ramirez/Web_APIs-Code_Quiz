@@ -6,34 +6,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/quiz.css"/>
+    <link rel="stylesheet" href="assets/css/quiz.css" />
 </head>
+
 <body>
     <header>
         <div>
-            <p> Score: <span id ="score">0</span></p>
+            <p> Score: <span id="score">0</span></p>
         </div>
         <div>
-            <p> Time Left: <span id = "timer">0</span></p>
+            <p> Time Left: <span id="timer">0</span></p>
         </div>
     </header>
     <main id="flood">
-        <h1 id ="question">Answer the question below: </h1>
-        <div class = "answers">
-            <p class="answertext" data-letter ="A">Answer A</p>
-            </div>
-            <div class = "answers">
-            <p class="answertext" data-letter ="B">Answer B</p>
-            </div>
-            <div class = "answers">
-            <p class="answertext" data-letter ="C">Answer C</p>
-            </div>
-            <div class = "answers">
-            <p class="answertext" data-letter ="D">Answer D</p>
-            </div>
+        <h1 id="question">Answer the question below: </h1>
+        <div class="answers">
+            <p class="answertext" data-letter="A">Answer A</p>
+        </div>
+        <div class="answers">
+            <p class="answertext" data-letter="B">Answer B</p>
+        </div>
+        <div class="answers">
+            <p class="answertext" data-letter="C">Answer C</p>
+        </div>
+        <div class="answers">
+            <p class="answertext" data-letter="D">Answer D</p>
+        </div>
     </main>
     <main id="dry">
-        <p>results</p>
+        <h1>Results</h1>
+        <h2 id="enterName">Enter your name to save your quiz score!</h2>
+        <div id="user-info">
+            <input id="userName" placeholder="Type name here">
+            <br>
+            <button id="saveBtn" type="submit">Save</button>
+            <p id="nameScore"></p>
+        </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="assets/js/quiz.js"></script>
