@@ -47,6 +47,8 @@ https://stackoverflow.com/questions/34549135/how-to-keep-track-of-high-score-in-
 
 https://www.educba.com/javascript-button/
 
+I also received tutoring. 
+
 ## License
 
 Please refer to the LICENSE in the repo.
