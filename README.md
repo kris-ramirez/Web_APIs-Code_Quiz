@@ -23,9 +23,9 @@ Click the start button:
 The quiz and timer will start. Answer the question by clicking on the correct answer:
 [question & answer choices](assets/images/ScreenShot2.png)
 
-After you answer all five questions enter your name to see your score OR hit the Try Again button to start over: [results page](assets/images/ScreenShot3.png)
+After you answer all five questions enter your name to see your score: [results page](assets/images/ScreenShot3.png)
 
-Then your name and score will appear on the page: [your name and score](assets/images/ScreenShot4.png)
+Then your name and score will appear on the page. Click the Try Again button to start over: [your name and score](assets/images/ScreenShot4.png)
 
 ## Credits
 
@@ -35,7 +35,7 @@ https://www.youtube.com/watch?v=KB6Yg5hNrqc
 
 https://www.youtube.com/watch?v=79WRPIknVHs&t=3817s
 
-https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=3566s
+https://www.youtube.com/watch?v=AFTvxsVv52k
 
 And here are the webpages I used:
 

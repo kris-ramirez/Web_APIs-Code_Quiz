@@ -1,4 +1,3 @@
-
 var question = document.querySelector('#question');
 var choices = document.querySelectorAll('.answertext');
 var scoreText = document.querySelector('#score');
@@ -68,31 +67,31 @@ startQuiz = () => {
 
 
 function getNextQuestion() {
-    if (allquestions.length === 0 || questioncounter > maxquestions) {
+    if (allquestions.length === 0) {
         localStorage.setItem('highscore', points)
         document.getElementById('flood').style.display = "none";
         document.getElementById('dry').style.display = 'block';
         clearInterval(timerInterval);
+    } else {
+        questioncounter++;
+        //grabs a random question from array
+        var qindex = Math.floor(Math.random() * allquestions.length);
+        currentQuestion = allquestions[qindex];
+        //shows question 
+        question.innerText = currentQuestion.question;
+
+        //shows answer choices
+        choices.forEach(choice => {
+            var letter = choice.dataset['letter']
+            choice.innerText = currentQuestion['choice' + letter];
+            choice.addEventListener('click', answerSelected);
+            choice.classList.remove('incorrect', 'correct');
+        });
+
+        allquestions.splice(qindex, 1);
+        correctanswers = true;
 
     }
-    questioncounter++;
-    //grabs a random question from array
-    var qindex = Math.floor(Math.random() * allquestions.length);
-    currentQuestion = allquestions[qindex];
-    //shows question 
-    question.innerText = currentQuestion.question;
-
-    //shows answer choices
-    choices.forEach(choice => {
-        var letter = choice.dataset['letter']
-        choice.innerText = currentQuestion['choice' + letter];
-        choice.addEventListener('click', answerSelected);
-        choice.classList.remove('incorrect', 'correct');
-    });
-
-    allquestions.splice(qindex, 1);
-    correctanswers = true;
-
 }
 
 //what happens when answers are clicked on
@@ -120,7 +119,7 @@ function answerSelected(e) {
             choice.classList.add('correct');
         }
     });
-    
+
     setTimeout(getNextQuestion, 1000);
 
 }
@@ -152,15 +151,21 @@ saveButton.addEventListener('click', function (event) {
     var userName = document.querySelector("#userName").value;
     var highScore = scoreText.textContent;
     var userInfo = document.querySelector("#user-info");
-    
+
     userInfo.innerHTML = "Name: " + userName + " - " + highScore;
     userInfo.setAttribute('id', "userInfo");
+
+    //create try again btn
+    var goBack = document.createElement("button");
+    goBack.innerHTML = "Try Again"
+    document.body.appendChild(goBack);
+    goBack.setAttribute('id', 'startAgain');
+
+    goBack.addEventListener("click", function () {
+        location.reload();
+    });
 });
-var goBack = document.querySelector("#startAgain");
-    goBack.addEventListener("click", function(){
-    location.reload();
-});
+
 
 startQuiz();
-
 

@@ -3,9 +3,8 @@
     width: 30%;
     color: #379683;
     background-color: #edf5e1;
-    padding: 3px 2px;
+    padding: 1px;
     margin: 20px 0 5px 20px;
-    border-radius: 10%;
 }
 #score {
     color: #05386B;
@@ -15,9 +14,9 @@
     width: 30%;
     color: #379683;
     background-color: #edf5e1;
-    padding: 4px 4px;
+    padding: 1px;
     margin: 20px 0 5px 20px;
-    border-radius: 10%;
+    
 }
 #timer {
     color: #05386B;
@@ -98,6 +97,7 @@ input [type=text] {
     color:#edf5e1;
     font-size: medium;
     padding: 3px;
+    margin: auto;
 }
 /*shows up after user clicks save & shows name and score*/
 #userInfo {
